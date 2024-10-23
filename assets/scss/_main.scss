@@ -56,26 +56,14 @@ main {
           transition: all 1s;
         }
 
-        & div:first-child img,
-        & div:last-child img {
+        & div img {
+          width: 100%;
           object-fit: cover;
-        }
-
-        & div:first-child {
-          display: flex;
-          gap: 4px;
-
-          img {
-            width: 680px;
-            height: 455px;
-          }
-
         }
 
         & div:last-child {
           & img {
             height: 226px;
-            width: 510px;
           }
         }
 
@@ -88,26 +76,46 @@ main {
       }
 
       .secBlabla {
-        @include flexColCenter;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
 
-
-        & * {
-          border: 2px solid $black;
+        .left {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
         }
 
-        .right img {
-          width: 100%;
+        .right {
           height: 100%;
-          object-fit: cover;
+          width: 100%;
+
+          & div {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 0, 0, 0.7);
+            padding: 20px;
+            gap: 20px;
+            height: 70%;
+
+            & button {
+              width: 50%;
+              border: none;
+              background-color: #202020;
+              color: rgb(255, 255, 255, 0.8);
+              padding: 10px;
+              border-radius: 10px;
+            }
+          }
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
-
-    // & * div p {
-    //   white-space: nowrap;
-    //   overflow: hidden;
-    //   text-overflow: ellipsis;
-    // }
   }
 }
 
@@ -127,19 +135,57 @@ main {
 
         .SecGalerie {
           flex-direction: row;
+
+          & div:first-child {
+            display: flex;
+            gap: 4px;
+
+            img {
+              width: 680px;
+              height: 455px;
+            }
+
+          }
+
+          & div:last-child {
+            & img {
+              height: 226px;
+              width: 510px;
+            }
+          }
         }
 
         .secBlabla {
           flex-direction: row;
+          gap: none;
 
           .left {
             width: 60%;
           }
 
           .right {
+            height: 300px;
+            width: 30%;
+
+            & div {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              height: 70%;
+
+              & button {
+                width: 50%;
+                border: none;
+                background-color: #202020;
+                color: rgb(255, 255, 255, 0.8);
+                padding: 10px;
+                border-radius: 10px;
+              }
+
+            }
+
             img {
-              height: 140px;
-              width: 310px;
+              width: 100%;
               object-fit: cover;
             }
           }

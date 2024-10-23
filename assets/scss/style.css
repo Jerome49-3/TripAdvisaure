@@ -203,21 +203,13 @@ main .wrapper .secOne .SecGalerie div img:hover {
   animation: borderSlide 2s linear both;
   transition: all 1s;
 }
-main .wrapper .secOne .SecGalerie div:first-child img, main .wrapper .secOne .SecGalerie div:last-child img {
+main .wrapper .secOne .SecGalerie div img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .wrapper .secOne .SecGalerie div:first-child {
-  display: flex;
-  gap: 4px;
-}
-main .wrapper .secOne .SecGalerie div:first-child img {
-  width: 680px;
-  height: 455px;
-}
 main .wrapper .secOne .SecGalerie div:last-child img {
   height: 226px;
-  width: 510px;
 }
 main .wrapper .secOne .nav {
   display: flex;
@@ -226,16 +218,37 @@ main .wrapper .secOne .nav {
 }
 main .wrapper .secOne .secBlabla {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  width: 100%;
+  gap: 20px;
 }
-main .wrapper .secOne .secBlabla * {
-  border: 2px solid black;
+main .wrapper .secOne .secBlabla .left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .wrapper .secOne .secBlabla .right {
+  height: 100%;
+  width: 100%;
+}
+main .wrapper .secOne .secBlabla .right div {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 20px;
+  gap: 20px;
+  height: 70%;
+}
+main .wrapper .secOne .secBlabla .right div button {
+  width: 50%;
+  border: none;
+  background-color: #202020;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
 }
 main .wrapper .secOne .secBlabla .right img {
   width: 100%;
-  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -252,16 +265,69 @@ main .wrapper .secOne .secBlabla .right img {
   main .wrapper .secOne .SecGalerie {
     flex-direction: row;
   }
+  main .wrapper .secOne .SecGalerie div:first-child {
+    display: flex;
+    gap: 4px;
+  }
+  main .wrapper .secOne .SecGalerie div:first-child img {
+    width: 680px;
+    height: 455px;
+  }
+  main .wrapper .secOne .SecGalerie div:last-child img {
+    height: 226px;
+    width: 510px;
+  }
   main .wrapper .secOne .secBlabla {
     flex-direction: row;
+    gap: none;
   }
   main .wrapper .secOne .secBlabla .left {
     width: 60%;
   }
+  main .wrapper .secOne .secBlabla .right {
+    height: 300px;
+    width: 30%;
+  }
+  main .wrapper .secOne .secBlabla .right div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 70%;
+  }
+  main .wrapper .secOne .secBlabla .right div button {
+    width: 50%;
+    border: none;
+    background-color: #202020;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+  }
   main .wrapper .secOne .secBlabla .right img {
-    height: 140px;
-    width: 310px;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 19vh;
+}
+footer span a {
+  font-weight: 800;
+}
+footer .footerTxt,
+footer .footerTxt a {
+  color: black;
+}
+footer .footerTxt a {
+  text-decoration: none;
+}
+footer .footerTxt a:hover {
+  color: #34E0A1;
+}
+footer .footerTxt a:active {
+  color: #34E0A1;
 }/*# sourceMappingURL=style.css.map */

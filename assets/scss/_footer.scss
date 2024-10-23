@@ -1,0 +1,32 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 19vh;
+
+  & span a {
+    font-weight: 800;
+  }
+
+  .footerTxt,
+  .footerTxt a {
+    color: $black;
+  }
+
+  .footerTxt a {
+    text-decoration: none;
+
+    &:hover {
+      color: $tripColor;
+    }
+
+    &:active {
+      color: $tripColor;
+    }
+
+    &:visited {
+      // color: $purpleLink;
+    }
+  }
+}
