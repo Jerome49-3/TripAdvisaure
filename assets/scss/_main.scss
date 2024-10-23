@@ -1,0 +1,150 @@
+main {
+  .wrapper {
+
+    .secOne {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .title {
+        display: flex;
+        gap: 10px;
+
+        & span:first-child {
+          color: $title;
+        }
+
+        span {
+          font-weight: 800;
+          font-size: 48px;
+        }
+      }
+
+      .secFilters {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px 10px 0px;
+        flex-wrap: wrap;
+        gap: 10px;
+
+
+        & article {
+          display: flex;
+          width: calc(50% - 10px);
+          padding: 20px;
+          border: 2px solid $black;
+          border-radius: 20px;
+          height: 80px;
+
+          & p {
+            width: 70%;
+          }
+
+          & i {
+            font-size: 24px;
+          }
+        }
+      }
+
+      .SecGalerie {
+        @include flexColCenter;
+        gap: 4px;
+
+        & div img:hover {
+          animation: borderSlide 2s linear both;
+          transition: all 1s;
+        }
+
+        & div:first-child img,
+        & div:last-child img {
+          object-fit: cover;
+        }
+
+        & div:first-child {
+          display: flex;
+          gap: 4px;
+
+          img {
+            width: 680px;
+            height: 455px;
+          }
+
+        }
+
+        & div:last-child {
+          & img {
+            height: 226px;
+            width: 510px;
+          }
+        }
+
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .secBlabla {
+        @include flexColCenter;
+
+
+        & * {
+          border: 2px solid $black;
+        }
+
+        .right img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    // & * div p {
+    //   white-space: nowrap;
+    //   overflow: hidden;
+    //   text-overflow: ellipsis;
+    // }
+  }
+}
+
+@media all and (min-width: 768px) {
+  main {
+    .wrapper {
+      .secOne {
+        .secFilters {
+          flex-wrap: nowrap;
+          flex-direction: row;
+          gap: none;
+
+          article {
+            width: calc(100% - 60px);
+          }
+        }
+
+        .SecGalerie {
+          flex-direction: row;
+        }
+
+        .secBlabla {
+          flex-direction: row;
+
+          .left {
+            width: 60%;
+          }
+
+          .right {
+            img {
+              height: 140px;
+              width: 310px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

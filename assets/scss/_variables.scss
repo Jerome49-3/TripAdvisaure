@@ -1,0 +1,10 @@
+$boxShadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+$textShadow1w: rgb(248, 246, 246);
+$textShadow2b: rgba(0, 0, 0, 0.7);
+$textShadow: 1px 1px 1px $textShadow1w, 1px 1px 1px $textShadow2b, 2px 2px 3px $textShadow1w, 
+  3px 3px 4px $textShadow1w,
+  1px 1px 2px $textShadow2b, 2px 2px 3px $textShadow2b, 3px 3px 4px $textShadow2b;
+$black: black;
+$white: white;
+$tripColor: #34E0A1;
+$title: #ff5d5d;

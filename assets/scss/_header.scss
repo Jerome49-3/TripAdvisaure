@@ -1,0 +1,136 @@
+header {
+  @include flexCenter;
+  width: 100%;
+
+  .wrapper {
+    @include flexBetween;
+    width: 100%;
+
+    .boxLogo {
+
+      img {
+        width: 100px;
+        object-fit: cover;
+      }
+    }
+
+    .boxHambuger {
+      @include flexColCenter;
+      background-color: transparent;
+      border: none;
+      gap: 4px;
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+
+      &:active {
+        box-shadow: inset 0px 0px 1px $black, inset 0px 0px 2px $black, inset 0px 0px 3px $black;
+        border-radius: 5px;
+      }
+
+      .line {
+        width: 20px;
+        height: 2.5px;
+        background-color: $black;
+      }
+    }
+
+    nav {
+      width: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      ul {
+        @include flexColCenter;
+        width: 100%;
+
+        li {
+          min-width: 120px;
+          @include flexCenter;
+          border-bottom: 2px solid transparent;
+
+          button {
+            border: none;
+            background-color: $black;
+            color: $white;
+            border-radius: 50px;
+            font-weight: 500;
+          }
+
+          & a {
+            font-weight: 900;
+            text-decoration: none;
+          }
+
+          & a,
+          & button {
+            padding: 8px;
+          }
+
+          &:hover:not(li:nth-child(4)) {
+            border-bottom: 2px solid $tripColor;
+          }
+
+          &:hover button {
+            cursor: pointer;
+            color: $black;
+            background-color: $tripColor;
+            box-shadow: inset 0px 0px 6px green, 0px 0px 4px $black;
+            font-weight: 700;
+          }
+
+          &:hover a {
+            text-shadow: $textShadow;
+          }
+
+          &:hover .fa-solid,
+          &:hover .fa-regular {
+            text-shadow: 1px 1px 1px $textShadow1w, 1px 1px 1px $textShadow2b;
+          }
+
+          .boxHearth .hearthFull {
+            display: none;
+          }
+
+          &:hover:nth-child(3) .boxHearth .hearthFull {
+            display: flex;
+            color: $tripColor;
+          }
+
+          &:hover:nth-child(3) .boxHearth .hearthEmpty {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .toogle {
+      display: flex;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  header {
+
+    .wrapper {
+      @include flexBetween;
+      flex-direction: row;
+
+      .boxHambuger {
+        display: none;
+      }
+
+      nav {
+        display: flex;
+
+        ul {
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+}
