@@ -1,9 +1,8 @@
-const toogle = () => {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("toogle");
-};
-export default toogle;
+const hamburgerButton = document.querySelector(".menu");
+const navigation = document.querySelector("nav");
+hamburgerButton.addEventListener("click", toggleNav);
 
-ocument.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("boxHambuger").addEventListener("click", toogle);
-});
+function toggleNav() {
+  hamburgerButton.classList.toggle("active");
+  navigation.classList.toggle("active");
+}

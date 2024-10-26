@@ -48,6 +48,7 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 header .wrapper {
   display: flex;
@@ -60,26 +61,29 @@ header .wrapper .boxLogo img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-header .wrapper .boxHambuger {
+header .wrapper .menu {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: transparent;
+  position: relative;
   border: none;
   gap: 4px;
   padding: 5px;
   width: 30px;
   height: 30px;
 }
-header .wrapper .boxHambuger:active {
+header .wrapper .menu:active {
   box-shadow: inset 0px 0px 1px black, inset 0px 0px 2px black, inset 0px 0px 3px black;
   border-radius: 5px;
 }
-header .wrapper .boxHambuger .line {
-  width: 20px;
+header .wrapper .menu .line {
+  width: 25px;
   height: 2.5px;
   background-color: black;
+  transition: transform 0.3s ease;
+  transform-origin: center;
 }
 header .wrapper nav {
   width: 100%;
@@ -141,8 +145,21 @@ header .wrapper nav ul li:hover:nth-child(3) .boxHearth .hearthFull {
 header .wrapper nav ul li:hover:nth-child(3) .boxHearth .hearthEmpty {
   display: none;
 }
-header .wrapper .toogle {
-  display: flex;
+
+.menu.active {
+  gap: 0;
+}
+
+.menu.active .line1 {
+  transform: rotate(45deg) translate(3px, 1.15px);
+}
+
+.menu.active .line2 {
+  display: none;
+}
+
+.menu.active .line3 {
+  transform: rotate(-45deg) translate(3px, 1.25px);
 }
 
 @media all and (min-width: 768px) {
@@ -152,7 +169,7 @@ header .wrapper .toogle {
     align-items: center;
     flex-direction: row;
   }
-  header .wrapper .boxHambuger {
+  header .wrapper .menu {
     display: none;
   }
   header .wrapper nav {
@@ -220,7 +237,7 @@ main .wrapper .secOne .SecGalerie div img {
 main .wrapper .secOne .SecGalerie div:last-child img {
   height: 226px;
 }
-main .wrapper .secOne .nav {
+main .wrapper .secOne .navi {
   display: flex;
   justify-content: space-between;
   align-items: center;

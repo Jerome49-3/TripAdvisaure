@@ -1,6 +1,7 @@
 header {
   @include flexCenter;
   width: 100%;
+  position: relative;
 
   .wrapper {
     @include flexBetween;
@@ -14,9 +15,10 @@ header {
       }
     }
 
-    .boxHambuger {
+    .menu {
       @include flexColCenter;
       background-color: transparent;
+      position: relative;
       border: none;
       gap: 4px;
       padding: 5px;
@@ -29,9 +31,11 @@ header {
       }
 
       .line {
-        width: 20px;
+        width: 25px;
         height: 2.5px;
         background-color: $black;
+        transition: transform 0.3s ease;
+        transform-origin: center;
       }
     }
 
@@ -104,11 +108,23 @@ header {
         }
       }
     }
-
-    .toogle {
-      display: flex;
-    }
   }
+}
+
+.menu.active {
+  gap: 0;
+}
+
+.menu.active .line1 {
+  transform: rotate(45deg) translate(3px, 1.15px);
+}
+
+.menu.active .line2 {
+  display: none;
+}
+
+.menu.active .line3 {
+  transform: rotate(-45deg) translate(3px, 1.25px);
 }
 
 @media all and (min-width: 768px) {
@@ -118,7 +134,7 @@ header {
       @include flexBetween;
       flex-direction: row;
 
-      .boxHambuger {
+      .menu {
         display: none;
       }
 
