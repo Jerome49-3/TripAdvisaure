@@ -1,0 +1,12 @@
+.secTwo,
+.secThree,
+.secFour {
+  @include flexColStart;
+
+  & h3 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+  }
+}

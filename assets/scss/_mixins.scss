@@ -35,6 +35,27 @@
   align-items: center;
 }
 
+@mixin flexColBetweenStart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin cardTitle {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+@mixin flexColTopStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 @mixin flexColCenter {
   display: flex;
   justify-content: center;

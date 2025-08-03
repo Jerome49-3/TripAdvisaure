@@ -1,0 +1,225 @@
+.boxCards,
+.boxBigCards {
+  @include flexBetween;
+  width: 100%;
+  padding: 10px 0 10px 0;
+
+  .cardDiaporama {
+    display: flex;
+    overflow-y: hidden;
+    gap: 15px;
+  }
+
+  .cardDiaporama::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    @include flexColCenter;
+    width: calc((100% / 3) - 10px);
+    position: relative;
+    flex-shrink: 0;
+
+    &:hover {
+      opacity: 80%;
+    }
+
+    & img {
+      width: 100%;
+      height: 200px;
+    }
+
+    .cardBoxHearth {
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      left: 90%;
+      transform: translate(-50%, -50%);
+      @include flexCenter;
+      filter: drop-shadow(0px 0px 0.5px #000);
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+
+      .heartEmpty {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #36E0A2;
+        filter: drop-shadow(0px 0px 0.5px #000);
+      }
+
+      .heartFull {
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .cardBoxHearth:hover .heartEmpty {
+      display: none;
+    }
+
+    .cardBoxHearth:hover .heartFull {
+      display: flex;
+      color: #36E0A2;
+      filter: drop-shadow(0px 0px 1px #000);
+    }
+
+    .cardLogoBestTrip {
+      width: 20px;
+      height: 30px;
+      // border: 2px solid red;
+      position: absolute;
+      top: 60%;
+      left: 10%;
+      transform: translate(-50%, -50%);
+      filter: drop-shadow(0px 0px 0.5px #000);
+
+      & img {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .cardBottom {
+      height: 100px;
+      @include flexColTopStart;
+      width: 100%;
+
+      & a {
+        text-decoration: none;
+        @include cardTitle;
+      }
+
+      .cardBoxRatings {
+        @include flexStart;
+        width: 100%;
+        gap: 10px;
+
+        .ratings {
+          display: flex;
+          gap: 2px;
+
+          .fa-circle,
+          .fa-circle-half-stroke {
+            color: #03AA6C;
+            font-size: 14px;
+          }
+
+          .faCircleFirstHalf {
+            transform: rotateY('180deg');
+          }
+        }
+      }
+    }
+  }
+
+  .card:hover>.cardBottom>a {
+    text-decoration: underline solid;
+  }
+
+  .cardIntro {
+    width: calc(100% / 3);
+    @include flexColTopStart;
+    gap: 20px;
+    padding-right: 8%;
+  }
+
+  .cardIntro,
+  .card {
+    height: 280px;
+  }
+}
+
+.boxBigCards {
+  .bigCard {
+    width: 357px;
+    height: 360px;
+
+    .cardTop {
+      width: 100%;
+      background-color: rgb(52, 224, 161, .5);
+      height: 274px;
+
+      & img {
+        display: block;
+        width: 357px;
+        height: 274px;
+        object-fit: cover;
+        padding: 5px;
+        opacity: 80%;
+      }
+    }
+
+    .cardBottom {
+      width: 100%;
+      height: 100px;
+      background-color: none;
+      @include flexColTopStart;
+      justify-content: space-between;
+
+      .cardDesc {
+        @include cardTitle;
+      }
+
+      .boxArticle {
+        @include flexColStart;
+        gap: 5px;
+        width: 100%;
+
+        .cardLogoArticleAndName {
+          @include flexStart;
+          width: 100%;
+          gap: 10px;
+
+          & img {
+            width: 40px;
+            height: 40px;
+            border-radius: 0;
+            display: block;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .bigCard:hover>.cardTop>img {
+    opacity: 1;
+  }
+
+  .bigCard:first-child {
+    & img {
+      border-radius: 23% 77% 26% 74% / 24% 19% 81% 76%;
+      transition: all 1.5s;
+    }
+  }
+
+  .bigCard:nth-child(2) {
+    & img {
+      border-radius: 35% 65% 16% 84% / 65% 81% 19% 35%;
+      transition: all 1.5s;
+    }
+  }
+
+  .bigCard:last-child {
+    & img {
+      border-radius: 57% 43% 56% 44% / 83% 61% 39% 17%;
+      transition: all 1.5s;
+    }
+  }
+
+  .bigCard:hover>.cardTop>img {
+    border-radius: 0;
+    transition: all 1.5s;
+    padding: 0;
+    background-color: #ffffff;
+  }
+}

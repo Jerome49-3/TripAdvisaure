@@ -1,142 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0e3dc56c21.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logoHeader/favicon-tripadvisor.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/reset/reset.css" />
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+    <link
+      href="https://db.onlinewebfonts.com/c/d863218d588265bf96f8febaadafdd18?family=Trip+Sans"
+      rel="stylesheet"
+    />
+    <title>Tripadvisor</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/0e3dc56c21.js" crossorigin="anonymous"></script>
-  <link rel="shortcut icon" href="./assets/img/logoHeader/favicon-tripadvisor.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/reset/reset.css">
-  <link rel="stylesheet" href="./assets/scss/style.css">
-  <title>Tripadvisor</title>
-</head>
-
-<body>
-  <header>
-    <div class="wrapper">
-      <div class="boxLogo">
-        <img src="./assets/img/logoHeader/Tripadvisor_logo.svg" alt="Tripadvisor">
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="boxLogo">
+          <img
+            src="./assets/img/logoHeader/Tripadvisor_logo.svg"
+            alt="Tripadvisor"
+          />
+        </div>
+        <button class="menu">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+          <div class="line line3"></div>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li>
+              <i class="fa-solid fa-pencil"></i>
+              <a href="#">Avis</a>
+            </li>
+            <li>
+              <i class="fa-regular fa-bell"></i>
+              <a href="#">Alertes</a>
+            </li>
+            <li>
+              <div class="boxHearth">
+                <i class="fa-regular fa-heart hearthEmpty"></i>
+                <i class="fa-solid fa-heart hearthFull"></i>
+              </div>
+              <a href="#">Favoris</a>
+            </li>
+            <li>
+              <button>connectez-vous</button>
+            </li>
+            <li>
+              <i class="fa-solid fa-cart-shopping"></i>
+              <a href="#">Panier</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <button class="menu">
-        <div class="line line1"></div>
-        <div class="line line2"></div>
-        <div class="line line3"></div>
-      </button>
-      <nav class="nav">
-        <ul>
-          <li>
-            <i class="fa-solid fa-pencil"></i>
-            <a href="#">Avis</a>
-          </li>
-          <li>
-            <i class="fa-regular fa-bell"></i>
-            <a href="#">Alertes</a>
-          </li>
-          <li>
-            <div class="boxHearth">
-              <i class="fa-regular fa-heart hearthEmpty"></i>
-              <i class="fa-solid fa-heart hearthFull"></i>
-            </div>
-            <a href="#">Favoris</a>
-          </li>
-          <li>
-            <button>
-              connectez-vous
-            </button>
-          </li>
-          <li>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <a href="#">Panier</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div class="wrapper">
-      <section class="secOne">
-        <div class="title">
-          <span>Explorez</span>
-          <span>Paris</span>
-        </div>
-        <div class="subtitle">
-          <span>Les revenus influencent le choix des expériences présentées sur cette page:</span>
-          <a href="#">en savoir plus</a>
-        </div>
-        <div class="secFilters">
-          <article class="card">
-            <p>Hôtels</p>
-            <i class="fa-solid fa-bed"></i>
-          </article>
-          <article class="card">
-            <p>Locations de vacances</p>
-            <i class="fa-solid fa-house-chimney-user"></i>
-          </article>
-          <article class="card">
-            <p>Activités</p>
-            <i class="fa-solid fa-ticket"></i>
-          </article>
-          <article class="card">
-            <p>Restaurant</p>
-            <i class="fa-solid fa-utensils"></i>
-          </article>
-          <article class="card">
-            <p>Forums de voyage</p>
-            <i class="fa-regular fa-comments"></i>
-          </article>
-          <article class="card">
-            <p>Plus</p>
-            <i class="fa-solid fa-ellipsis"></i>
-          </article>
-        </div>
-        <div class="SecGalerie">
-          <div>
-            <img src="./assets/img/view.jpg" alt="">
+    </header>
+    <main>
+      <div class="wrapper">
+        <section class="secOne">
+          <div class="title">
+            <span>Explorez</span>
+            <span>Paris</span>
           </div>
-          <div>
-            <img src="./assets/img/caption-8.jpg" alt="">
-            <img src="./assets/img/eiffeltoren.jpg" alt="">
+          <div class="subtitle">
+            <span
+              >Les revenus influencent le choix des expériences présentées sur
+              cette page:</span
+            >
+            <a href="#">en savoir plus</a>
           </div>
-        </div>
-        <div class="navi">
-          <small>Europe > France > Ile-de-France > Paris</small>
-          <small>Visiter: Paris</small>
-        </div>
-        <div class="secBlabla">
-          <div class="left">
-            <h2>La ville lumière éblouit en tous points</h2>
-            <p>Aucun autre endroit dans le monde ne fait autant rêver que Paris. <br />
-              La ville séduit par son art, son architecture, sa culture et sa cuisine mais il y aussi des merveilles
-              plus discrètes qui n'attendent
-              qu'à être explorées : les ruelles pavées pittoresques, les patisseries au coin de la rue et les petits
-              bistrots douillets qui vous incite à boire un verre de beaujolais.<br /> Préparez-vous à vous approprier
-              Paris.
-            </p>
+          <div class="secFilters">
+            <article class="card">
+              <div class="cardTextIcon">
+                <p>Hôtels</p>
+              </div>
+              <div class="cardIcon">
+                <i class="fa-solid fa-bed"></i>
+              </div>
+            </article>
+            <article class="card">
+              <div class="cardTextIcon">
+                <p>Locations de vacances</p>
+              </div>
+              <div class="cardIcon">
+                <i class="fa-solid fa-house-chimney-user"></i>
+              </div>
+            </article>
+            <article class="card">
+              <div class="cardTextIcon">
+                <p>Activités</p>
+              </div>
+              <div class="cardIcon">
+                <i class="fa-solid fa-ticket"></i>
+              </div>
+            </article>
+            <article class="card">
+              <div class="cardTextIcon">
+                <p>Restaurant</p>
+              </div>
+              <div class="cardIcon">
+                <i class="fa-solid fa-utensils"></i>
+              </div>
+            </article>
+            <article class="card">
+              <div class="cardTextIcon">
+                <p>Forums de voyage</p>
+              </div>
+              <div class="cardIcon">
+                <i class="fa-regular fa-comments"></i>
+              </div>
+            </article>
+            <article class="card">
+              <div class="cardTextIcon">
+                <p>Plus</p>
+              </div>
+              <div class="cardIcon">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </article>
           </div>
-          <article class="right">
+          <div class="SecGalerie">
             <div>
-              <h2>Paris: commencez à organiser !</h2>
-              <p>Créez un voyage pour enregistrer et organiser toutes vos idées et les visualiser sur une carte.</p>
-              <button>
-                Créez ton voyage
-              </button>
+              <img src="./assets/img/view.jpg" alt="" />
             </div>
-            <img src="./assets//img/image_trips_card_medium.png" alt="carte">
-          </article>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <div class="footerTxt">
-      <p>Made at<span>
-          <a
-            href="https://www.lereacteur.io/?utm_source=google&utm_medium=cpc&utm_campaign=FR-SN-Brand&utm_term=le%20r%C3%A9acteur&utm_content=377851505166&gad_source=1&gclid=CjwKCAjwx-CyBhAqEiwAeOcTde7EsCCHrpdDqUq2K3hFx24fxIMDKq0FZtDolDxM3NAtCfAZggCxmRoCJuAQAvD_BwE">Le
-            Reacteur</a>
-        </span> by <span><a href="https://github.com/Jerome49-3">Jerome Bobin</a></span> - 2024</p>
-    </div>
-    <script src="./assets//lib/toogle.js"></script>
-  </footer>
-</body>
+            <div>
+              <img src="./assets/img/caption-8.jpg" alt="" />
+              <img src="./assets/img/eiffeltoren.jpg" alt="" />
+            </div>
+          </div>
+          <div class="navi">
+            <small>Europe > France > Ile-de-France > Paris</small>
+            <small>Visiter: Paris</small>
+          </div>
+          <div class="secBlabla">
+            <div class="left">
+              <h2>La ville lumière éblouit en tous points</h2>
+              <p>
+                Aucun autre endroit dans le monde ne fait autant rêver que
+                Paris. <br />
+                La ville séduit par son art, son architecture, sa culture et sa
+                cuisine mais il y aussi des merveilles plus discrètes qui
+                n'attendent qu'à être explorées : les ruelles pavées
+                pittoresques, les patisseries au coin de la rue et les petits
+                bistrots douillets qui vous incite à boire un verre de
+                beaujolais.<br />
+                Préparez-vous à vous approprier Paris.
+              </p>
+            </div>
+            <article class="right">
+              <div>
+                <h2>Paris: commencez à organiser !</h2>
+                <p>
+                  Créez un voyage pour enregistrer et organiser toutes vos idées
+                  et les visualiser sur une carte.
+                </p>
+                <button>Créez ton voyage</button>
+              </div>
+              <img
+                src="./assets//img/image_trips_card_medium.png"
+                alt="carte"
+              />
+            </article>
+          </div>
+        </section>
+        <section class="secTwo">
+          <h3>Paris: les immanquables</h3>
+          <div class="boxCards">
+            <div class="cardIntro">
+              <div class="cardIntroTitle">Se divertir</div>
+              <div class="cardIntroDesc">
+                Des lieux à voir, des rues à explorer et des expériences
+                emblématiques à Paris.
+              </div>
+              <a href="#" class="cardIntroLink">Tout afficher</a>
+            </div>
+            <div class="cardDiaporama">
+              <div class="card">
+                <img
+                  src="./assets/img/eiffeltoren.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Tour Eiffel</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings">
+                      <!-- <i class="fa-solid fa-circle"></i>
+                      <i class="fa-solid fa-circle"></i>
+                      <i class="fa-solid fa-circle"></i>
+                      <i class="fa-solid fa-circle"></i>
+                      <i
+                        class="fa-solid fa-circle-half-stroke faCircleFirstHalf"
+                      ></i> -->
+                    </div>
+                    <div class="nbrRatings">139 901</div>
+                  </div>
+                  <div class="cardDesc">
+                    Tours et plateformes d'observation, Monuments & Points
+                    d'intérêt
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/arc-de-triomphe-at-night.jpg"
+                  alt="Arc de Triomphe"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Arc de Triomphe</a>
 
+                  <div class="cardBoxRatings">
+                    <div class="ratings">
+                      <!-- <i class="fa-solid fa-circle"></i>
+                      <i class="fa-solid fa-circle"></i>
+                      <i class="fa-solid fa-circle"></i>
+                      <i class="fa-solid fa-circle"></i>
+                      <i class="fa-regular fa-circle"></i> -->
+                    </div>
+                    <div class="nbrRatings">56 987</div>
+                  </div>
+                  <div class="cardDesc">
+                    Bâtiments architecturaux, Sites historiques
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/louvre.jpg"
+                  alt="vue sur la pyramide de verre dans la cour exterieur du musée du louvre"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Musée du Louvre</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">100 845</div>
+                  </div>
+                  <div class="cardDesc">
+                    Bâtiments architecturaux, Musées d'art
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/the-bookstore.jpg"
+                  alt="Librairie Shakespear and Company"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Musée du Louvre</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">140 321</div>
+                  </div>
+                  <div class="cardDesc">Bibliothèques, Grands magasinst</div>
+                </div>
+              </div>
+              <div class="card">
+                <img src="./assets/img/museeOrsay.jpg" alt="Musée d'Orsay" />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Musée d'Orsay</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">67 761</div>
+                  </div>
+                  <div class="cardDesc">Musées d'art</div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/marcheauxPuces.jpg"
+                  alt="Marché aux Puces de Saint-Ouen"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Marché aux Puces</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">103 495</div>
+                  </div>
+                  <div class="cardDesc">
+                    Antiquaires, Marchés aux puces à Saint-Ouen, proche de Paris
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="secThree">
+          <div class="boxCards">
+            <div class="cardIntro">
+              <div class="cardIntroTitle">Se restaurer</div>
+              <div class="cardIntroDesc">
+                Bistrots et bars typiques, et plus encore à Paris.
+              </div>
+              <a href="#" class="cardIntroLink">Tout afficher</a>
+            </div>
+            <div class="cardDiaporama">
+              <div class="card">
+                <img
+                  src="./assets/img/meal6.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Frenchie</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">1 297</div>
+                  </div>
+                  <div class="cardDesc">
+                    €€€€ · Française, Végétariens bienvenus, Plats sans gluten
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/meal5.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">114 Faubourg</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">1 754</div>
+                  </div>
+                  <div class="cardDesc">
+                    €€ · Française, Européenne, Végétariens bienvenus
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/meal4.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip"></div>
+                <div class="cardBottom">
+                  <a href="#">Verjus</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">545</div>
+                  </div>
+                  <div class="cardDesc">
+                    €€€ · Française, Européenne, Moderne
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/meal3.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip"></div>
+                <div class="cardBottom">
+                  <a href="#">ASPIC</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">2 981</div>
+                  </div>
+                  <div class="cardDesc">
+                    €€€€ · Française, Européenne, Saine
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/meal2.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip">
+                  <img
+                    src="./assets/img/2025_Best_of_the_Best_Badge_Large.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="cardBottom">
+                  <a href="#">Bistrot chic</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">1 345</div>
+                  </div>
+                  <div class="cardDesc">
+                    €€€ · Française, Européenne, Saine, Moderne
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  src="./assets/img/meal1.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+                <div class="cardBoxHearth">
+                  <i class="fa-regular fa-heart heartEmpty"></i>
+                  <i class="fa-solid fa-heart heartFull"></i>
+                </div>
+                <div class="cardLogoBestTrip"></div>
+                <div class="cardBottom">
+                  <a href="#">Vive les huîtres</a>
+                  <div class="cardBoxRatings">
+                    <div class="ratings"></div>
+                    <div class="nbrRatings">4 340</div>
+                  </div>
+                  <div class="cardDesc">
+                    €€€€ · Française, Moderne, Bar à vins
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="secFour">
+          <h3>Guides de voyageurs</h3>
+          <div class="boxBigCards">
+            <article class="bigCard">
+              <div class="cardTop">
+                <img
+                  src="./assets/img/visit1.jpg"
+                  alt="artist'paint studio in paris"
+                />
+              </div>
+              <div class="cardBottom">
+                <div class="cardDesc">
+                  Best summer things to do in Paris | Eatwith
+                </div>
+                <div class="boxArticle">
+                  <div class="nbrArticle">36 articles</div>
+                  <figure class="cardLogoArticleAndName">
+                    <img
+                      src="./assets/img/forks-icon.jpg"
+                      alt="logo topito.com"
+                      class="logoArticle"
+                    />
+                    <figcaption class="articleName">Par Eatwith</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </article>
+            <article class="bigCard">
+              <div class="cardTop">
+                <img
+                  src="./assets/img/visit2.jpg"
+                  alt="grevin museum in paris"
+                />
+              </div>
+              <div class="cardBottom">
+                <div class="cardDesc">
+                  Les 10 monuments et musées de Paris à faire
+                </div>
+                <div class="boxArticle">
+                  <div class="nbrArticle">10 articles</div>
+                  <figure class="cardLogoArticleAndName">
+                    <img
+                      src="./assets/img/topito-com.jpg"
+                      alt="logo topito.com"
+                      class="logoArticle"
+                    />
+                    <figcaption class="articleName">Par Topito</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </article>
+            <div class="bigCard">
+              <div class="cardTop">
+                <img
+                  src="./assets/img/visit3.jpg"
+                  alt="champ de mars avec vue sur la tour eiffel"
+                />
+              </div>
+              <div class="cardBottom">
+                <div class="cardDesc">
+                  Top 10 des choses à faire ou à voir dans le 14ème
+                </div>
+                <div class="boxArticle">
+                  <div class="nbrArticle">10 articles</div>
+                  <figure class="cardLogoArticleAndName">
+                    <img
+                      src="./assets/img/topito-com.jpg"
+                      alt="logo topito.com"
+                      class="logoArticle"
+                    />
+                    <figcaption class="articleName">Par Topito</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footerTxt">
+        <p>
+          Made at<span>
+            <a
+              href="https://www.lereacteur.io/?utm_source=google&utm_medium=cpc&utm_campaign=FR-SN-Brand&utm_term=le%20r%C3%A9acteur&utm_content=377851505166&gad_source=1&gclid=CjwKCAjwx-CyBhAqEiwAeOcTde7EsCCHrpdDqUq2K3hFx24fxIMDKq0FZtDolDxM3NAtCfAZggCxmRoCJuAQAvD_BwE"
+              >Le Reacteur</a
+            >
+          </span>
+          by
+          <span><a href="https://github.com/Jerome49-3">Jerome Bobin</a></span>
+          - 2024
+        </p>
+      </div>
+      <script src="./assets//lib/toogle.js"></script>
+      <script src="./assets//lib/circleMap.js"></script>
+    </footer>
+  </body>
 </html>
