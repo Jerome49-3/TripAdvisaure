@@ -2,176 +2,155 @@
 .boxBigCards {
   @include flexBetween;
   width: 100%;
-  padding: 10px 0 10px 0;
   flex-direction: column;
+  overflow-x: scroll;
+}
 
-  .cardDiaporama {
-    display: flex;
-    gap: 10px;
-    flex: 3;
-    overflow: scroll;
+.cardDiaporama {
+  display: flex;
+  gap: 10px;
+  flex: 3;
+  overflow-x: scroll;
+  // padding-right: 20px;
+  padding-left: 300px;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+}
+
+.card {
+  @include flexColCenter;
+  width: calc((100% - 20px) / 3);
+  position: relative;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 80%;
   }
 
-  ::-webkit-scrollbar {
-    height: 5px;
+  & img {
+    width: 100%;
+    height: 200px;
   }
 
-  /* Track */
-  ::-webkit-scrollbar-track:hover {
-    background: #8bf9d1;
-    border-radius: 15px;
-    background-clip: content-box;
-    box-shadow: inset 0 0 0 1px #05faa0, inset 0.5px 0.5px 0.5px 1px #006641, 0.5px 0.5px 1px #006641;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb:hover {
-    border: 2px solid transparent;
-    background-clip: content-box;
-    border-radius: 15px;
-    box-shadow: inset 0 0 0 2px #05faa0, inset 0 0 0 0.5px #006641;
-    background: #006641;
-  }
-
-  /* Handle on hover */
-  // ::-webkit-scrollbar-thumb:hover {
-  //   background: #038052;
-  // }
-
-  .card {
-    @include flexColCenter;
-    // width: calc((100% - 75px) / 6);
-    position: relative;
-    flex-shrink: 0;
+  .cardBoxHearth {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    @include flexCenter;
+    -webkit-filter: drop-shadow(0px 0px 0.5px #000);
+    filter: drop-shadow(0px 0px 0.5px #000);
 
     &:hover {
-      opacity: 80%;
+      background-color: #f2f2f2;
     }
+
+    .heartEmpty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #36E0A2;
+      -webkit-filter: drop-shadow(0px 0px 0.5px #000);
+      filter: drop-shadow(0px 0px 0.5px #000);
+    }
+
+    .heartFull {
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .cardBoxHearth:hover .heartEmpty {
+    display: none;
+  }
+
+  .cardBoxHearth:hover .heartFull {
+    display: flex;
+    color: #36E0A2;
+    -webkit-filter: drop-shadow(0px 0px 1px #000);
+    filter: drop-shadow(0px 0px 1px #000);
+  }
+
+  .cardLogoBestTrip {
+    width: 20px;
+    height: 30px;
+    // border: 2px solid red;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    -webkit-filter: drop-shadow(0px 0px 0.5px #000);
+    filter: drop-shadow(0px 0px 0.5px #000);
 
     & img {
+      display: block;
+      -o-object-fit: cover;
+      object-fit: cover;
       width: 100%;
-      height: 200px;
+      height: 100%;
+    }
+  }
+
+  .cardBottom {
+    height: 100px;
+    @include flexColTopStart;
+    width: 100%;
+
+    & a {
+      text-decoration: none;
+      @include cardTitle;
     }
 
-    .cardBoxHearth {
-      width: 25px;
-      height: 25px;
-      background-color: white;
-      border-radius: 50%;
-      position: absolute;
-      top: 10%;
-      left: 90%;
-      transform: translate(-50%, -50%);
-      @include flexCenter;
-      -webkit-filter: drop-shadow(0px 0px 0.5px #000);
-      filter: drop-shadow(0px 0px 0.5px #000);
+    .cardBoxRatings {
+      @include flexStart;
+      width: 100%;
+      gap: 10px;
 
-      &:hover {
-        background-color: #f2f2f2;
-      }
-
-      .heartEmpty {
+      .ratings {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #36E0A2;
-        -webkit-filter: drop-shadow(0px 0px 0.5px #000);
-        filter: drop-shadow(0px 0px 0.5px #000);
-      }
+        gap: 2px;
 
-      .heartFull {
-        display: none;
-        justify-content: center;
-        align-items: center;
-      }
-    }
+        .fa-circle,
+        .fa-circle-half-stroke {
+          color: #03AA6C;
+          font-size: 14px;
+        }
 
-    .cardBoxHearth:hover .heartEmpty {
-      display: none;
-    }
-
-    .cardBoxHearth:hover .heartFull {
-      display: flex;
-      color: #36E0A2;
-      -webkit-filter: drop-shadow(0px 0px 1px #000);
-      filter: drop-shadow(0px 0px 1px #000);
-    }
-
-    .cardLogoBestTrip {
-      width: 20px;
-      height: 30px;
-      // border: 2px solid red;
-      position: absolute;
-      top: 60%;
-      left: 10%;
-      transform: translate(-50%, -50%);
-      -webkit-filter: drop-shadow(0px 0px 0.5px #000);
-      filter: drop-shadow(0px 0px 0.5px #000);
-
-      & img {
-        display: block;
-        -o-object-fit: cover;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .cardBottom {
-      height: 100px;
-      @include flexColTopStart;
-      width: 100%;
-
-      & a {
-        text-decoration: none;
-        @include cardTitle;
-      }
-
-      .cardBoxRatings {
-        @include flexStart;
-        width: 100%;
-        gap: 10px;
-
-        .ratings {
-          display: flex;
-          gap: 2px;
-
-          .fa-circle,
-          .fa-circle-half-stroke {
-            color: #03AA6C;
-            font-size: 14px;
-          }
-
-          .faCircleFirstHalf {
-            transform: rotateY('180deg');
-          }
+        .faCircleFirstHalf {
+          transform: rotateY('180deg');
         }
       }
     }
   }
-
-  .card:hover>.cardBottom>a {
-    -webkit-text-decoration: underline solid;
-    text-decoration: underline solid;
-  }
-
-  .cardIntro {
-    @include flexColTopStart;
-    gap: 20px;
-    padding-right: 8%;
-    flex: 1;
-  }
-
-  .cardIntro,
-  .card {
-    height: 280px;
-  }
 }
 
+.card:hover>.cardBottom>a {
+  -webkit-text-decoration: underline solid;
+  text-decoration: underline solid;
+}
+
+
+
+.cardIntro,
+.card {
+  height: 280px;
+}
+
+
 .boxBigCards {
+  display: flex;
+  gap: 10px;
+
   .bigCard {
-    width: 357px;
-    height: 360px;
+    width: 100%;
+
 
     .cardTop {
       width: 100%;
@@ -259,21 +238,35 @@
 // BREAKPOINTS
 // @media all and (min-width : 576px) {}
 
-@media all and (min-width : 768px) {}
+@media all and (min-width : 768px) {
 
-// @media all and (min-width : 992px) {}
-@media all and (max-width: 768px) {
-  .cardDiaporama>.card:first-child {
-    margin-left: 300px;
+  /* Track */
+  ::-webkit-scrollbar-track:hover {
+    background: #8bf9d1;
+    border-radius: 15px;
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 1px #05faa0, inset 0.5px 0.5px 0.5px 1px #006641, 0.5px 0.5px 1px #006641;
   }
 
-  .cardDiaporama>.card:last-child {
-    margin-right: 30px;
+  /* Handle */
+  ::-webkit-scrollbar-thumb:hover {
+    border: 2px solid transparent;
+    background-clip: content-box;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 2px #05faa0, inset 0 0 0 0.5px #006641;
+    background: #006641;
   }
 }
 
+// @media all and (min-width : 992px) {}
+
 @media all and (min-width : 1200px) {
+
   .boxCards {
+    .cardDiaporama {
+      padding: 0;
+    }
+
     .cardIntro {
       width: calc(100% / 3) !important;
     }
@@ -286,6 +279,12 @@
   .boxCards,
   .boxBigCards {
     flex-direction: row !important;
+  }
+
+  .boxBigCards {
+    .bigCard {
+      width: 357px;
+    }
   }
 
 }

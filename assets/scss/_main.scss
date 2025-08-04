@@ -26,7 +26,7 @@ main {
       // SECTION FILTERS
       .secFilters {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         margin: 10px 0px 10px 0px;
         flex-wrap: wrap;
@@ -36,9 +36,10 @@ main {
 
         & article {
           display: flex;
-          width: calc(100% - 50px /6);
+          width: 45%;
           padding: 10px;
           border: 2px solid $black;
+
           border-radius: 15px;
           height: 60px;
 
@@ -157,8 +158,8 @@ main {
           flex-direction: row;
           gap: none;
 
-          article {
-            width: calc(100% - 60px);
+          cardFilters {
+            // width: calc(100% - 60px);
           }
         }
 

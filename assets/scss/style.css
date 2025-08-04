@@ -241,7 +241,7 @@ main .wrapper .secOne .title span {
 }
 main .wrapper .secOne .secFilters {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 10px 0px 10px 0px;
   flex-wrap: wrap;
@@ -250,7 +250,7 @@ main .wrapper .secOne .secFilters {
 }
 main .wrapper .secOne .secFilters article {
   display: flex;
-  width: calc(100% - 8.3333333333px);
+  width: 45%;
   padding: 10px;
   border: 2px solid black;
   border-radius: 15px;
@@ -354,9 +354,6 @@ main .wrapper .secOne .secBlabla .right img {
     flex-direction: row;
     gap: none;
   }
-  main .wrapper .secOne .secFilters article {
-    width: calc(100% - 60px);
-  }
   main .wrapper .secOne .SecGalerie {
     flex-direction: row;
     width: 100%;
@@ -430,65 +427,74 @@ main .wrapper .secOne .secBlabla .right img {
   font-size: 28px;
   line-height: 38px;
 }
+.secTwo .top,
+.secThree .top,
+.secFour .top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.secTwo .top .cardIntro,
+.secThree .top .cardIntro,
+.secFour .top .cardIntro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 8%;
+  flex: 1;
+}
+.secTwo .top .boxCards,
+.secThree .top .boxCards,
+.secFour .top .boxCards {
+  flex: 3;
+}
 
+@media all and (min-width: 992px) {
+  .top {
+    flex-direction: row !important;
+  }
+}
 .boxCards,
 .boxBigCards {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 0 10px 0;
   flex-direction: column;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
+  overflow-x: scroll;
 }
-.boxCards .cardDiaporama,
-.boxBigCards .cardDiaporama {
+
+.cardDiaporama {
   display: flex;
   gap: 10px;
   flex: 3;
-  overflow: scroll;
+  overflow-x: scroll;
+  padding-left: 300px;
 }
-.boxCards ::-webkit-scrollbar,
-.boxBigCards ::-webkit-scrollbar {
+
+::-webkit-scrollbar {
   height: 5px;
 }
-.boxCards ::-webkit-scrollbar-track:hover,
-.boxBigCards ::-webkit-scrollbar-track:hover {
-  background: #8bf9d1;
-  border-radius: 15px;
-  background-clip: content-box;
-  box-shadow: inset 0 0 0 1px #05faa0, inset 0.5px 0.5px 0.5px 1px #006641, 0.5px 0.5px 1px #006641;
-}
-.boxCards ::-webkit-scrollbar-thumb:hover,
-.boxBigCards ::-webkit-scrollbar-thumb:hover {
-  border: 2px solid transparent;
-  background-clip: content-box;
-  border-radius: 15px;
-  box-shadow: inset 0 0 0 2px #05faa0, inset 0 0 0 0.5px #006641;
-  background: #006641;
-}
-.boxCards .card,
-.boxBigCards .card {
+
+.card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: calc((100% - 20px) / 3);
   position: relative;
   flex-shrink: 0;
 }
-.boxCards .card:hover,
-.boxBigCards .card:hover {
+.card:hover {
   opacity: 80%;
 }
-.boxCards .card img,
-.boxBigCards .card img {
+.card img {
   width: 100%;
   height: 200px;
 }
-.boxCards .card .cardBoxHearth,
-.boxBigCards .card .cardBoxHearth {
+.card .cardBoxHearth {
   width: 25px;
   height: 25px;
   background-color: white;
@@ -502,36 +508,30 @@ main .wrapper .secOne .secBlabla .right img {
   align-items: center;
   filter: drop-shadow(0px 0px 0.5px #000);
 }
-.boxCards .card .cardBoxHearth:hover,
-.boxBigCards .card .cardBoxHearth:hover {
+.card .cardBoxHearth:hover {
   background-color: #f2f2f2;
 }
-.boxCards .card .cardBoxHearth .heartEmpty,
-.boxBigCards .card .cardBoxHearth .heartEmpty {
+.card .cardBoxHearth .heartEmpty {
   display: flex;
   justify-content: center;
   align-items: center;
   color: #36E0A2;
   filter: drop-shadow(0px 0px 0.5px #000);
 }
-.boxCards .card .cardBoxHearth .heartFull,
-.boxBigCards .card .cardBoxHearth .heartFull {
+.card .cardBoxHearth .heartFull {
   display: none;
   justify-content: center;
   align-items: center;
 }
-.boxCards .card .cardBoxHearth:hover .heartEmpty,
-.boxBigCards .card .cardBoxHearth:hover .heartEmpty {
+.card .cardBoxHearth:hover .heartEmpty {
   display: none;
 }
-.boxCards .card .cardBoxHearth:hover .heartFull,
-.boxBigCards .card .cardBoxHearth:hover .heartFull {
+.card .cardBoxHearth:hover .heartFull {
   display: flex;
   color: #36E0A2;
   filter: drop-shadow(0px 0px 1px #000);
 }
-.boxCards .card .cardLogoBestTrip,
-.boxBigCards .card .cardLogoBestTrip {
+.card .cardLogoBestTrip {
   width: 20px;
   height: 30px;
   position: absolute;
@@ -540,16 +540,14 @@ main .wrapper .secOne .secBlabla .right img {
   transform: translate(-50%, -50%);
   filter: drop-shadow(0px 0px 0.5px #000);
 }
-.boxCards .card .cardLogoBestTrip img,
-.boxBigCards .card .cardLogoBestTrip img {
+.card .cardLogoBestTrip img {
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-.boxCards .card .cardBottom,
-.boxBigCards .card .cardBottom {
+.card .cardBottom {
   height: 100px;
   display: flex;
   justify-content: flex-start;
@@ -557,63 +555,49 @@ main .wrapper .secOne .secBlabla .right img {
   flex-direction: column;
   width: 100%;
 }
-.boxCards .card .cardBottom a,
-.boxBigCards .card .cardBottom a {
+.card .cardBottom a {
   text-decoration: none;
   font-size: 18px;
   line-height: 20px;
   font-weight: 600;
   text-align: justify;
 }
-.boxCards .card .cardBottom .cardBoxRatings,
-.boxBigCards .card .cardBottom .cardBoxRatings {
+.card .cardBottom .cardBoxRatings {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
   gap: 10px;
 }
-.boxCards .card .cardBottom .cardBoxRatings .ratings,
-.boxBigCards .card .cardBottom .cardBoxRatings .ratings {
+.card .cardBottom .cardBoxRatings .ratings {
   display: flex;
   gap: 2px;
 }
-.boxCards .card .cardBottom .cardBoxRatings .ratings .fa-circle,
-.boxCards .card .cardBottom .cardBoxRatings .ratings .fa-circle-half-stroke,
-.boxBigCards .card .cardBottom .cardBoxRatings .ratings .fa-circle,
-.boxBigCards .card .cardBottom .cardBoxRatings .ratings .fa-circle-half-stroke {
+.card .cardBottom .cardBoxRatings .ratings .fa-circle,
+.card .cardBottom .cardBoxRatings .ratings .fa-circle-half-stroke {
   color: #03AA6C;
   font-size: 14px;
 }
-.boxCards .card .cardBottom .cardBoxRatings .ratings .faCircleFirstHalf,
-.boxBigCards .card .cardBottom .cardBoxRatings .ratings .faCircleFirstHalf {
+.card .cardBottom .cardBoxRatings .ratings .faCircleFirstHalf {
   transform: rotateY("180deg");
 }
-.boxCards .card:hover > .cardBottom > a,
-.boxBigCards .card:hover > .cardBottom > a {
+
+.card:hover > .cardBottom > a {
   -webkit-text-decoration: underline solid;
   text-decoration: underline solid;
 }
-.boxCards .cardIntro,
-.boxBigCards .cardIntro {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 20px;
-  padding-right: 8%;
-  flex: 1;
-}
-.boxCards .cardIntro,
-.boxCards .card,
-.boxBigCards .cardIntro,
-.boxBigCards .card {
+
+.cardIntro,
+.card {
   height: 280px;
 }
 
+.boxBigCards {
+  display: flex;
+  gap: 10px;
+}
 .boxBigCards .bigCard {
-  width: 357px;
-  height: 360px;
+  width: 100%;
 }
 .boxBigCards .bigCard .cardTop {
   width: 100%;
@@ -690,15 +674,27 @@ main .wrapper .secOne .secBlabla .right img {
   background-color: #ffffff;
 }
 
-@media all and (max-width: 768px) {
-  .cardDiaporama > .card:first-child {
-    margin-left: 300px;
+@media all and (min-width: 768px) {
+  /* Track */
+  ::-webkit-scrollbar-track:hover {
+    background: #8bf9d1;
+    border-radius: 15px;
+    background-clip: content-box;
+    box-shadow: inset 0 0 0 1px #05faa0, inset 0.5px 0.5px 0.5px 1px #006641, 0.5px 0.5px 1px #006641;
   }
-  .cardDiaporama > .card:last-child {
-    margin-right: 30px;
+  /* Handle */
+  ::-webkit-scrollbar-thumb:hover {
+    border: 2px solid transparent;
+    background-clip: content-box;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 2px #05faa0, inset 0 0 0 0.5px #006641;
+    background: #006641;
   }
 }
 @media all and (min-width: 1200px) {
+  .boxCards .cardDiaporama {
+    padding: 0;
+  }
   .boxCards .cardIntro {
     width: 33.3333333333% !important;
   }
@@ -708,6 +704,9 @@ main .wrapper .secOne .secBlabla .right img {
   .boxCards,
   .boxBigCards {
     flex-direction: row !important;
+  }
+  .boxBigCards .bigCard {
+    width: 357px;
   }
 }
 footer {

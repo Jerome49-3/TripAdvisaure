@@ -9,4 +9,36 @@
     font-size: 28px;
     line-height: 38px;
   }
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .cardIntro {
+      @include flexColTopStart;
+      gap: 20px;
+      padding-right: 8%;
+      flex: 1;
+    }
+
+    .boxCards {
+      flex: 3;
+    }
+  }
 }
+
+// BREAKPOINTS
+// @media all and (min-width : 576px) {}
+
+@media all and (min-width : 768px) {}
+
+@media all and (min-width : 992px) {
+  .top {
+    flex-direction: row !important;
+  }
+}
+
+// @media all and (min-width : 1200px) {}
+
+// @media all and (min-width : 1400px) {}
