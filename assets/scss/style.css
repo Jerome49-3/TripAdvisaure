@@ -459,6 +459,9 @@ main .wrapper .secOne .secBlabla .right img {
   .top {
     flex-direction: row !important;
   }
+  .secThree > .top > .boxCards > .cardDiaporama {
+    padding-left: 0 !important;
+  }
 }
 .boxCards,
 .boxBigCards {

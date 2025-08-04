@@ -41,6 +41,10 @@
   .top {
     flex-direction: row !important;
   }
+
+  .secThree>.top>.boxCards>.cardDiaporama {
+    padding-left: 0 !important;
+  }
 }
 
 // @media all and (min-width : 1200px) {}
