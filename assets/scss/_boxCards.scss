@@ -7,9 +7,9 @@
 
   .cardDiaporama {
     display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    gap: 15px;
+    gap: 10px;
+    flex: 3;
+    overflow: scroll;
   }
 
   ::-webkit-scrollbar {
@@ -40,7 +40,7 @@
 
   .card {
     @include flexColCenter;
-    width: calc((100% / 3) - 10px);
+    // width: calc((100% - 75px) / 6);
     position: relative;
     flex-shrink: 0;
 
@@ -156,10 +156,10 @@
   }
 
   .cardIntro {
-    width: 100%;
     @include flexColTopStart;
     gap: 20px;
     padding-right: 8%;
+    flex: 1;
   }
 
   .cardIntro,
@@ -259,14 +259,27 @@
 // BREAKPOINTS
 // @media all and (min-width : 576px) {}
 
-// @media all and (min-width : 768px) {}
+@media all and (min-width : 768px) {}
 
 // @media all and (min-width : 992px) {}
+@media all and (max-width: 768px) {
+  .cardDiaporama>.card:first-child {
+    margin-left: 300px;
+  }
+
+  .cardDiaporama>.card:last-child {
+    margin-right: 30px;
+  }
+}
 
 @media all and (min-width : 1200px) {
   .boxCards {
     .cardIntro {
       width: calc(100% / 3) !important;
+    }
+
+    .card {
+      width: calc((100% - 50px) / 2.9);
     }
   }
 
@@ -274,6 +287,7 @@
   .boxBigCards {
     flex-direction: row !important;
   }
+
 }
 
 // @media all and (min-width : 1400px) {}
