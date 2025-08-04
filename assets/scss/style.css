@@ -26,10 +26,35 @@
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+@media all and (min-width: 576px) {
+  .wrapper {
+    max-width: 500px;
+  }
+}
+@media all and (min-width: 768px) {
+  .wrapper {
+    max-width: 700px;
+  }
+}
+@media all and (min-width: 992px) {
+  .wrapper {
+    max-width: 900px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .wrapper {
+    max-width: 1100px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .wrapper {
+    max-width: 1200px;
+  }
 }
 
 * h2 {
@@ -413,16 +438,36 @@ main .wrapper .secOne .secBlabla .right img {
   align-items: center;
   width: 100%;
   padding: 10px 0 10px 0;
+  flex-direction: column;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 .boxCards .cardDiaporama,
 .boxBigCards .cardDiaporama {
   display: flex;
   overflow-y: hidden;
+  overflow-x: scroll;
   gap: 15px;
 }
-.boxCards .cardDiaporama::-webkit-scrollbar,
-.boxBigCards .cardDiaporama::-webkit-scrollbar {
-  display: none;
+.boxCards ::-webkit-scrollbar,
+.boxBigCards ::-webkit-scrollbar {
+  height: 5px;
+}
+.boxCards ::-webkit-scrollbar-track:hover,
+.boxBigCards ::-webkit-scrollbar-track:hover {
+  background: #8bf9d1;
+  border-radius: 15px;
+  background-clip: content-box;
+  box-shadow: inset 0 0 0 1px #05faa0, inset 0.5px 0.5px 0.5px 1px #006641, 0.5px 0.5px 1px #006641;
+}
+.boxCards ::-webkit-scrollbar-thumb:hover,
+.boxBigCards ::-webkit-scrollbar-thumb:hover {
+  border: 2px solid transparent;
+  background-clip: content-box;
+  border-radius: 15px;
+  box-shadow: inset 0 0 0 2px #05faa0, inset 0 0 0 0.5px #006641;
+  background: #006641;
 }
 .boxCards .card,
 .boxBigCards .card {
@@ -500,7 +545,7 @@ main .wrapper .secOne .secBlabla .right img {
 .boxBigCards .card .cardLogoBestTrip img {
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
@@ -548,11 +593,11 @@ main .wrapper .secOne .secBlabla .right img {
 .boxCards .card:hover > .cardBottom > a,
 .boxBigCards .card:hover > .cardBottom > a {
   -webkit-text-decoration: underline solid;
-          text-decoration: underline solid;
+  text-decoration: underline solid;
 }
 .boxCards .cardIntro,
 .boxBigCards .cardIntro {
-  width: 33.3333333333%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -581,7 +626,7 @@ main .wrapper .secOne .secBlabla .right img {
   width: 357px;
   height: 274px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   padding: 5px;
   opacity: 80%;
 }
@@ -622,7 +667,7 @@ main .wrapper .secOne .secBlabla .right img {
   border-radius: 0;
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .boxBigCards .bigCard:hover > .cardTop > img {
   opacity: 1;
@@ -646,6 +691,15 @@ main .wrapper .secOne .secBlabla .right img {
   background-color: #ffffff;
 }
 
+@media all and (min-width: 1200px) {
+  .boxCards .cardIntro {
+    width: 33.3333333333% !important;
+  }
+  .boxCards,
+  .boxBigCards {
+    flex-direction: row !important;
+  }
+}
 footer {
   width: 100%;
   min-height: 60px;
